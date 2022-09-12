@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="サイト説明: はじめてのホームページ" />
+    <link rel="stylesheet" href="end.css" />
+  </head>
+
+  <body>
+    <aside id="mainimg">メインイメージ</aside>
+
+    <header></header>
+
+    <main>
+      <div id="nav">
+        <h1 id="logo"><a href="#">My Home Page.</a></h1>
+        <div id="menubar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+        <ul class="sns">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <main class="contents">
+        <section>
+          <h2>初めてのMy Home Page</h2>
+          <h3>HTML: Hyper Text Markup Language</h3>
+          <p>
+            私はhtmlの勉強を始めた。htmlはコンテンツを表示させるための言語だ。この調子で頑張ろうと思う。
+          </p>
+          <p>
+            h1からh6のタグは見出しを作るために使う。ただし文字の大きさを変えるために使うのはよくないと教わった。
+          </p>
+          <p>
+            文字の大きさを変えたいときはspanタグなどで囲ってcssで変えるのだと学んだ。ここにメモしておこう。
+          </p>
+          <p>
+            divタグはとても便利だ。いろいろなものを囲って管理することができる。そういえば昨日何食べたっけ？
+          </p>
+        </section>
+
+        <section>
+          <h3>CSS: Cascading Style Sheets</h3>
+          <p>
+            同時にcssの勉強も始めた。htmlを装飾するための言語らしい。cssは見た目に関することならなんでもできそうだ。
+          </p>
+          <p>
+            cssでidを指定するときは先頭に#を付けて、classを指定するときは先頭に.を付ける。組み合わせも大事だ。
+          </p>
+          <p>
+            cssには全部で約250個のプロパティ(colorやfont-size)があり使いこなせるか不安だが、使っていると覚えていくだろう。
+          </p>
+          <p>
+            cssだけを使って作った芸術作品なんかもあるみたいだ。URLでも貼っておこう。<a
+              class="youtube"
+              href="https://www.youtube.com/watch?v=nl-9qfe65oo"
+              target="_blank"
+              >【Youtubeリンク】</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h2>発展</h2>
+          <dl id="development">
+            <p>
+              htmlやcssと組み合わせて使える言語があるらしい。JavaScriptと呼ぶそうだ。Javaと名前が似ているが別物だ。
+            </p>
+            <p>
+              JavaScriptを使えばとてもとてもとてもとてもとっても複雑な処理をWebサイトに実装したりできるらしい。
+            </p>
+            <p>
+              プログラミングは継続力がものすごく大事だ。1日5分でもいいから欠かさずやり続けるといずれ大きな力になる。
+            </p>
+            <p>
+              この<button id="toggle">ボタン</button
+              >を押したら何かが起きる予感がする。これもJavaScriptらしい。
+            </p>
+            <div class="hidden hide">
+              こんにちは！実はこんなところに隠れてました。新しい<button
+                id="button"
+              >
+                ボタン</button
+              >を置いておくね♪
+            </div>
+          </dl>
+          <script>
+            const $buttonToggle = document.querySelector("#toggle");
+            const $buttonAlert = document.querySelector("#button");
+            const $divHide = document.querySelector(".hide");
+            const $divHidden = document.querySelector(".hidden");
+
+            console.log($buttonAlert);
+
+            $buttonAlert.addEventListener("click", () => {
+              alert("Hello JavaScript");
+              console.log("Hello World");
+              $divHide.classList.add("hidden");
+            });
+
+            $buttonToggle.addEventListener("click", () => {
+              $divHidden.classList.remove("hidden");
+            });
+          </script>
+        </section>
+      </main>
+
+      <div class="contents shortcut">
+        <section>
+          <h2>Shortcut</h2>
+          <table class="ta1">
+            <h3>Visual Studio Code</h3>
+
+            <tr>
+              <th>Shift + Alt + F</th>
+              <td>コードの整形</td>
+            </tr>
+
+            <tr>
+              <th>Ctrl + S</th>
+              <td>コードの保存</td>
+            </tr>
+
+            <tr>
+              <th>
+                Alt + ↓
+              </th>
+              <td>行を下へ移動</td>
+            </tr>
+
+            <tr>
+              <th>
+                Alt + ↑
+              </th>
+              <td>行を上へ移動</td>
+            </tr>
+
+            <tr>
+              <th>
+                Shift + Alt + ↓
+              </th>
+              <td>行を下へコピー</td>
+            </tr>
+
+            <tr>
+              <th>
+                Shift + Alt + ↑
+              </th>
+              <td>行を上へコピー</td>
+            </tr>
+
+            <tr>
+              <th>
+                Ctrl + Shift + K
+              </th>
+              <td>行の削除</td>
+            </tr>
+
+            <tr>
+              <th>
+                F2
+              </th>
+              <td>名前を変更</td>
+            </tr>
+
+            <tr>
+              <th>
+                Ctrl + D
+              </th>
+              <td>選択範囲と同じ文字列の複数指定</td>
+            </tr>
+
+            <tr>
+              <th>
+                Ctrl + B
+              </th>
+              <td>サイドバーの表示/非表示</td>
+            </tr>
+
+            <tr>
+              <th>
+                	Ctrl + @
+              </th>
+              <td>ターミナルの表示/非表示</td>
+            </tr>
+
+          </table>
+          <h2>Others Shorcut</h2>
+          <table class="ta1">
+
+            <tr>
+              <th>
+                	Ctrl + Shift + C / F12
+              </th>
+              <td>DevToolsの起動/コマンドプロンプトの起動</td>
+            </tr>
+            <tr>
+              <th>
+                	Ctrl + Shift + T
+              </th>
+              <td>直前に閉じたブラウザの復元</td>
+            </tr>
+
+            <tr>
+              <th>
+                	Ctrl + C
+              </th>
+              <td>コピー</td>
+            </tr>
+
+            <tr>
+              <th>
+                	Ctrl + V
+              </th>
+              <td>貼り付け</td>
+            </tr>
+
+            <tr>
+              <th>
+                	Ctrl + X
+              </th>
+              <td>切り取り</td>
+            </tr>
+            <tr>
+              <th>
+                	Ctrl + Z
+              </th>
+              <td>直前の操作を取り消す</td>
+            </tr>
+            <tr>
+              <th>
+                	Ctrl + Y
+              </th>
+              <td>直前の操作を繰り返す</td>
+            </tr>
+            <tr>
+              <th>
+                	Alt + F4
+              </th>
+              <td>作業中のウィンドウを閉じる</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+
+      <footer class="contents">
+        <section>
+          <h2>リンク</h2>
+
+          <table class="ta2">
+            <tr>
+              <th>
+                <a href="https://google.com/" target="_blank">Google</a>
+              </th>
+              <td>天下のGoogle。調べ物をする際、大体お世話になる。</td>
+            </tr>
+            <tr>
+              <th>
+                <a href="https://youtube.com/" target="_blank">Youtube</a>
+              </th>
+              <td>多種多様な動画を閲覧することができる。知識を増やせる。</td>
+            </tr>
+            <tr>
+              <th>
+                <a
+                  href="https://www.peko-step.com/tool/colorchart.html"
+                  target="_blank"
+                  >Webカラーチャート</a
+                >
+              </th>
+              <td>
+                html, css等で使える色の見本サイト。RGBや16進数で出力される。
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a href="https://fontawesome.com/versions" target="_blank"
+                  >Font Awesome</a
+                >
+              </th>
+              <td>様々なフォントをダウンロード・使用することができる。</td>
+            </tr>
+            <tr>
+              <th>
+                <a href="https://coco-factory.jp/ugokuweb/" target="_blank"
+                  >動くデザイン帳</a
+                >
+              </th>
+              <td>
+                気に入ったcssアニメーションがあればコピーし、使うことができる。
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a href="https://www.pakutaso.com/" target="_blank"
+                  >ぱくたそ・写真素材</a
+                >
+              </th>
+              <td>
+                使って楽しい、見て楽しい。高解像度で美しいフリー写真が沢山ある。
+              </td>
+            </tr>
+          </table>
+        </section>
+      </footer>
+    </main>
+  </body>
+</html>
