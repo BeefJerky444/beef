@@ -147,10 +147,6 @@ main h2 {
 }
 
 .hidden {
-  display: none;
-}
-
-.hide {
   color: rgb(255, 47, 252);
 }
 
