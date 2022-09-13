@@ -41,7 +41,7 @@
             h1からh6のタグは見出しを作るために使う。ただし文字の大きさを変えるために使うのはよくないと教わった。
           </p>
           <p>
-            文字の大きさを変えたいときはspanタグなどで囲ってcssで変えるのだと学んだ。ここにメモしておこう。
+            文字の大きさを変えたいときは他のタグで囲ってcssで変えるのだと学んだ。ここにメモしておこう。
           </p>
           <p>
             divタグはとても便利だ。いろいろなものを囲って管理することができる。そういえば昨日何食べたっけ？
@@ -71,46 +71,36 @@
 
         <section>
           <h2>発展</h2>
-          <dl id="development">
-            <p>
-              htmlやcssと組み合わせて使える言語があるらしい。JavaScriptと呼ぶそうだ。Javaと名前が似ているが別物だ。
-            </p>
-            <p>
-              JavaScriptを使えばとてもとてもとてもとてもとっても複雑な処理をWebサイトに実装したりできるらしい。
-            </p>
-            <p>
-              プログラミングは継続力がものすごく大事だ。1日5分でもいいから欠かさずやり続けるといずれ大きな力になる。
-            </p>
-            <p>
-              この<button id="toggle">ボタン</button
-              >を押したら何かが起きる予感がする。これもJavaScriptらしい。
-            </p>
-            <div class="hidden hide">
-              こんにちは！実はこんなところに隠れてました。新しい<button
-                id="button"
-              >
-                ボタン</button
-              >を置いておくね♪
-            </div>
-          </dl>
+          <p>
+            htmlやcssと組み合わせて使える言語があるらしい。JavaScriptと呼ぶそうだ。Javaと名前が似ているが別物だ。
+          </p>
+          <p>
+            JavaScriptを使えばとてもとてもとてもとてもとっても複雑な処理をWebサイトに実装したりできるらしい。
+          </p>
+          <p>
+            プログラミングは継続力がものすごく大事だ。1日5分でもいいから欠かさずやり続けるといずれ大きな力になる。
+          </p>
+          <p>
+            この<button id="toggle">ボタン</button>を押したら何かが起きる予感がする。これもJavaScriptらしい。
+          </p>
+          <div class="hidden" style="display: none;">
+            こんにちは！実はこんなところに隠れてました。新しい<button id="button">ボタン</button>を置いておくね♪
+          </div>
           <script>
-            const $buttonToggle = document.querySelector("#toggle");
-            const $buttonAlert = document.querySelector("#button");
-            const $divHide = document.querySelector(".hide");
-            const $divHidden = document.querySelector(".hidden");
-
-            console.log($buttonAlert);
-
-            $buttonAlert.addEventListener("click", () => {
-              alert("Hello JavaScript");
-              console.log("Hello World");
-              $divHide.classList.add("hidden");
-            });
-
-            $buttonToggle.addEventListener("click", () => {
-              $divHidden.classList.remove("hidden");
-            });
-          </script>
+              const $buttonOpen = document.querySelector("#open");
+              const $buttonAlert = document.querySelector("#button");
+              const $divHidden = document.querySelector(".hidden");
+  
+              $buttonAlert.addEventListener("click", () => {
+                alert("Hello JavaScript");
+                console.log("Hello World");
+                $divHidden.style.display = 'none';
+              });
+  
+              $buttonOpen.addEventListener("click", () => {
+                $divHidden.style.display = 'block';
+              });
+            </script>
         </section>
       </main>
 
