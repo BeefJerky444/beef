@@ -109,13 +109,13 @@ header {
 .sns {
   position: absolute;
   right: 2%;
-  bottom: 25%;
+  bottom: 40%;
 }
 
 .sns li {
   font-size: 14px;
   display: inline;
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 
 .contents {
