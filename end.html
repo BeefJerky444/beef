@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>My Home Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="サイト説明: はじめてのホームページ" />
     <link rel="stylesheet" href="end.css" />
+    <script src="end.js" defer></script>
   </head>
 
   <body>
     <aside id="mainimg">メインイメージ</aside>
-
-    <header></header>
 
     <main>
       <div id="nav">
@@ -86,21 +84,6 @@
           <div class="hidden" style="display: none;">
             こんにちは！実はこんなところに隠れてました。新しい<button id="button">ボタン</button>を置いておくね♪
           </div>
-          <script>
-            const $buttonOpen = document.querySelector("#open");
-            const $buttonAlert = document.querySelector("#button");
-            const $divHidden = document.querySelector(".hidden");
-
-            $buttonAlert.addEventListener("click", () => {
-              alert("Hello JavaScript");
-              console.log("Hello World");
-              $divHidden.style.display = "none";
-            });
-
-            $buttonOpen.addEventListener("click", () => {
-              $divHidden.style.display = "block";
-            });
-          </script>
         </section>
       </main>
 
