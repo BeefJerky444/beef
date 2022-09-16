@@ -5,7 +5,6 @@
     <title>My Home Page</title>
     <meta name="description" content="サイト説明: はじめてのホームページ" />
     <link rel="stylesheet" href="end.css" />
-    <script src="end.js" defer></script>
   </head>
 
   <body>
@@ -286,5 +285,20 @@
         </section>
       </footer>
     </main>
+    <script>
+    const $buttonOpen = document.querySelector("#open");
+const $buttonAlert = document.querySelector("#button");
+const $divHidden = document.querySelector(".hidden");
+
+$buttonAlert.addEventListener("click", () => {
+  alert("Hello JavaScript");
+  console.log("Hello World");
+  $divHidden.style.display = "none";
+});
+
+$buttonOpen.addEventListener("click", () => {
+  $divHidden.style.display = "block";
+});
+    </script>
   </body>
 </html>
